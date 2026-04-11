@@ -1,2 +1,1 @@
-index.html
-assets/
+# Keep prebuilt Tina admin assets in version control for Cloudflare deploys.

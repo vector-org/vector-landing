@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tinacms build && next build",
+    "build": "next build",
+    "build:admin": "node ./scripts/build-tina-admin.mjs",
     "dev": "node ./scripts/dev-with-local-tina.mjs",
     "start": "next start",
     "lint": "eslint .",
@@ -36,12 +37,12 @@
     "react-icons": "5.5",
     "tailwind-merge": "1.14",
     "tailwindcss-animate": "1.0",
-    "tinacms": "^3.7.2"
+    "tinacms": "2.10.1"
   },
   "devDependencies": {
     "@eslint/js": "~9.39.4",
     "@next/eslint-plugin-next": "~15.5.15",
-    "@tinacms/cli": "^2.2.2",
+    "@tinacms/cli": "1.12.6",
     "@types/node": "^24.0.1",
     "@types/react": "19",
     "@types/react-dom": "19",

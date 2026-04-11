@@ -15,8 +15,6 @@ next-env.d.ts
 .DS_Store
 nul
 NUL
-public/admin/index.html
-public/admin/assets/
 tina/__generated__/client.ts
 tina/__generated__/config.prebuild.jsx
 tina/__generated__/.cache/
