@@ -11,8 +11,10 @@ export default [
   {
     ignores: [
       ".next/**",
+      ".open-next/**",
       "node_modules/**",
       "out/**",
+      "next-env.d.ts",
       "public/admin/**",
       "tina/__generated__/**"
     ]
