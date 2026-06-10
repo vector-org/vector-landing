@@ -8,7 +8,13 @@ export const HeroSection = () => {
       id="hero"
       className="relative z-0 mt-6 flex flex-col items-center px-7 md:max-w-3xl md:px-7"
     >
-      <Image src="/ykyg.svg" alt="Vector slogan" height={200} width={420} />
+      <Image
+        src="/ykyg.svg"
+        alt="Vector slogan"
+        height={40}
+        width={420}
+        className="h-auto w-[260px] md:w-[420px]"
+      />
       <Image
         src="/logo.svg"
         alt="VECTOR"
