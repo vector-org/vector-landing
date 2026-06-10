@@ -70,14 +70,6 @@ const NavMenu = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link
-                  href="/press"
-                  className="px-4 py-2 text-sm font-medium transition-colors"
-                >
-                  Press
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
                 <DownloadButton short />
               </NavigationMenuItem>
             </NavigationMenuList>
