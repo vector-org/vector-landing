@@ -2,7 +2,7 @@
 
 Standalone Next.js/TinaCMS repo extracted from the Vector monorepo.
 
-Cloudflare deploys use the prebuilt Tina admin bundle under `public/admin/` and do not run `tinacms build` during the app build.
+Cloudflare deploys build the Tina admin bundle locally before the OpenNext build. Generated admin files are not committed.
 
 ## Requirements
 
@@ -33,6 +33,6 @@ pnpm dev
 
 - `pnpm dev`: run Tina local dev + Next.js
 - `pnpm build`: build the Next.js app only
-- `pnpm build:admin`: refresh the prebuilt Tina admin bundle in `public/admin`
+- `pnpm build:admin`: generate the Tina admin bundle in `public/admin`
 - `pnpm lint`: run ESLint
 - `pnpm start`: start the production server

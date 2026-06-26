@@ -23,8 +23,7 @@ const CookieBanner = () => {
             name: "Necessary",
             description:
               "<p>These cookies are necessary for the website to function properly.</p>",
-            required: true,
-            onAccept: () => console.log("Necessary cookies accepted")
+            required: true
           },
           {
             id: "analytical",
@@ -49,9 +48,7 @@ const CookieBanner = () => {
             name: "Advertising",
             description:
               "<p>These cookies provide personalization and ad targeting.</p>",
-            required: false,
-            onAccept: () => console.log("Advertising accepted"),
-            onReject: () => console.log("Advertising rejected")
+            required: false
           }
         ],
         text: {
