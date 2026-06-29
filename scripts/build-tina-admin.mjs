@@ -13,9 +13,10 @@ if (original.includes(broken)) {
   writeFileSync(tinaCliIndex, original.replace(broken, fixed))
 }
 
-const child = spawn("tinacms build", {
+const args = process.argv.slice(2).filter((arg) => arg !== "--")
+
+const child = spawn(process.execPath, [tinaCliIndex, "build", ...args], {
   stdio: "inherit",
-  shell: true,
   env: process.env
 })
 

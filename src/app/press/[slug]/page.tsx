@@ -1,9 +1,9 @@
-import client from "@/lib/tina-client"
+import { getPost, getPostConnection } from "@/lib/tina-client"
 import { notFound } from "next/navigation"
 import PressPostClient from "../../../components/pressPostClient"
 
 export async function generateStaticParams() {
-  const postsResponse = await client.queries.postConnection()
+  const postsResponse = await getPostConnection()
   const posts = postsResponse.data.postConnection.edges || []
 
   return posts.map((post) => ({
@@ -20,9 +20,12 @@ export default async function PressPost({
   let data, query, variables
 
   try {
-    const result = await client.queries.post({
-      relativePath: `${slug}.mdx`
-    })
+    const result = await getPost(`${slug}.mdx`)
+
+    if (!result) {
+      notFound()
+    }
+
     data = result.data
     query = result.query
     variables = result.variables

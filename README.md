@@ -3,11 +3,12 @@
 Standalone Next.js/TinaCMS repo extracted from the Vector monorepo.
 
 Cloudflare deploys build the Tina admin bundle locally before the OpenNext build. Generated admin files are not committed.
+`pnpm build` works without Tina credentials and renders the press index empty when they are absent.
 
 ## Requirements
 
 - Node.js 22.16.0
-- pnpm 9.15.4
+- pnpm 11.7.0
 
 ## Setup
 
@@ -34,5 +35,6 @@ pnpm dev
 - `pnpm dev`: run Tina local dev + Next.js
 - `pnpm build`: build the Next.js app only
 - `pnpm build:admin`: generate the Tina admin bundle in `public/admin`
+- `pnpm build:admin -- --skip-cloud-checks`: generate the Tina admin bundle without validating TinaCloud credentials
 - `pnpm lint`: run ESLint
 - `pnpm start`: start the production server

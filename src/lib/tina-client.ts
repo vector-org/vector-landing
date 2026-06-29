@@ -10,18 +10,29 @@ const branch =
 const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID
 const token = process.env.TINA_TOKEN
 
-if (!clientId) {
-  throw new Error("NEXT_PUBLIC_TINA_CLIENT_ID is required to build Tina content")
+const client =
+  clientId && token
+    ? createClient({
+        url: `https://content.tinajs.io/1.6/content/${clientId}/github/${branch}`,
+        token,
+        queries
+      })
+    : null
+
+export async function getPostConnection() {
+  if (!client) {
+    return { data: { postConnection: { edges: [] } } }
+  }
+
+  return client.queries.postConnection()
 }
 
-if (!token) {
-  throw new Error("TINA_TOKEN is required to build Tina content")
-}
+export async function getPost(relativePath: string) {
+  if (!client) {
+    return null
+  }
 
-const client = createClient({
-  url: `https://content.tinajs.io/1.6/content/${clientId}/github/${branch}`,
-  token,
-  queries
-})
+  return client.queries.post({ relativePath })
+}
 
 export default client

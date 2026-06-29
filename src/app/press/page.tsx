@@ -1,11 +1,11 @@
-import client from "@/lib/tina-client"
+import { getPostConnection } from "@/lib/tina-client"
 import Link from "next/link"
 import Image from "next/image"
 import NavMenu from "../../components/navMenu"
 import Footer from "../../components/footer"
 
 export default async function PressIndex() {
-  const postsResponse = await client.queries.postConnection()
+  const postsResponse = await getPostConnection()
   const posts = postsResponse.data.postConnection.edges || []
 
   const publishedPosts = posts
