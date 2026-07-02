@@ -27,7 +27,8 @@ pnpm dev
 - `NEXT_PUBLIC_TINA_CLIENT_ID`: Tina public client ID
 - `TINA_TOKEN`: Tina read/build token
 - `SUPABASE_URL`: Supabase project URL for `/api/subscribe`
-- `SUPABASE_ANON_KEY`: Supabase anon key for `/api/subscribe`
+- `SUPABASE_PUBLISHABLE_KEY`: Preferred Supabase publishable key for `/api/subscribe`
+- `SUPABASE_ANON_KEY`: Legacy fallback Supabase anon key for `/api/subscribe`
 - `HUBSPOT_ACCESS_TOKEN`: HubSpot token for `/api/newsletter`
 
 ## Scripts
