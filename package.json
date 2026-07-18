@@ -41,7 +41,7 @@
   "devDependencies": {
     "@eslint/js": "~9.39.4",
     "@next/eslint-plugin-next": "~15.5.18",
-    "@tinacms/cli": "2.5.1",
+    "@tinacms/cli": "2.5.6",
     "@types/node": "^24.0.1",
     "@types/react": "19",
     "@types/react-dom": "19",
